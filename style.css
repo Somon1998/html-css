@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: white;
+  background-color: black;
+}
+
+p {
+  text-indent: 20px;
+}
+
+.title {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-decoration: line-through;
+  text-transform: uppercase;
+}
+
+.justify {
+  text-align: justify;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: outside;
+  color: red;
+}
+
+ol {
+  list-style-type: decimal-leading-zero;
+}
+
+a {
+  color: red;
+}
+
+/* Контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Текстовый блок */
+.text-block {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+/* Изображение */
+.image-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Адаптация для планшетов (ширина экрана до 1024px) */
+@media (max-width: 1024px) {
+  body {
+    font-size: 14px; /* Уменьшаем шрифт */
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .text-block,
+  .image-block {
+    flex: 1 1 100%;
+  }
+}
+
+/* Адаптация для телефонов (ширина экрана до 768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  img {
+    border-radius: 0; /* Убираем закругления для удобства */
+  }
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #3b82f6, #4f46e5);
+  transform: translateY(-2px);
+}
+
+.download-btn:active {
+  transform: translateY(1px);
+}
